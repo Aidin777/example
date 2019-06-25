@@ -1,5 +1,10 @@
 <?php
-inculde('model/db.php');
-inculde('model/model.php');
-inculde('views/v_index.php');
+include('model/startup.php');
+include('model/model.php');
+
+
+
+
+
+include('views/v_index.php');
 ?>
