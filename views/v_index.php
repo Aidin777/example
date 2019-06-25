@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <title><?=$title?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="../../../main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
+
+	
+	
 <nav class="navbar navbar-light bg-dark justify-content-between fixed-top">
-    <a class="navbar-brand bg-light" href="">BOTS</a>
+    <a class="navbar-brand bg-light" href=""><img src="img/logo.png" alt=""></a>
+
     
+
     <div class="container">
+
+    	Телефон: (499) 340-94-71
+	Email^ info@future-group.ru
+
+	<h1>Комментарии</h1>
         <div class="btn-group">
             <div class="btn-group dropleft">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Тренировка</button>
@@ -79,6 +89,10 @@
 <br>
 <br>
 <br>
+
+Телефон: (499) 340-94-71 <br>
+	Email: info@future-group.ru<br>
+	<b>Адрес: 115088 Москваб ул 2-я Машиностроения, д. 7 стр. 1</b> 
 <nav class="navbar navbar-light bg-dark fixed-bottom text-center">
     <p >Тестовый вариант функционирования сайта!</p>
     <hr>
