@@ -1,6 +1,7 @@
 body{
 	background-color: grey;
 }
+
 .main-container{
 	background-color: white;
 	width: 1200px;
@@ -29,4 +30,10 @@ body{
 	float: left;
 	margin-left: ;
 
+}
+.send{
+	border-radius: 4px;
+	border: 2px solid black;
+	padding: 2px 10px;
+	float: right;
 }

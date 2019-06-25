@@ -42,9 +42,36 @@
 <div class="container">
 	<div class="row">
 		<?php
+			$rows[] = showAllComments();
 
-			var_dump($rows);
-		?>
+			foreach($rows as $row => $value){ 
+				// echo '<pre>';
+				// var_dump($value);
+				// echo '</pre>';
+				
+
+				foreach($value as $val){ ?>
+
+					
+
+				<div class="row">
+					
+						<b><?=$val['name']?></b> <br>	
+					
+				</div>
+				<div class="row">
+					
+						<i><?=$val['data']?></i>	
+					
+				</div>
+
+				
+				<?=$val['comment']?>
+				
+
+
+				
+			<?} } ?>
 	</div>
 </div>
 
@@ -66,7 +93,11 @@
 	      <textarea  type="email" class="form-control" id="inputComment5" placeholder="Введите имя"></textarea>
 	    </div>
 	</div>
-
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	      <input type="submit" class="send">
+	    </div>
+	</div>
 </form>
 <br>
 <br>
