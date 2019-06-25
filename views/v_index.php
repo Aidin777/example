@@ -1,3 +1,8 @@
+<?php
+if($_POST['send']){
+	insertComment($_POST['login'], $_POST['comment']);
+}
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -9,115 +14,101 @@
 </head>
 <body>
 
-<br>
-<br>
-<br>
-<br>
-
-<nav class="navbar navbar-light bg-light justify-content-between fixed-top">
-    
-<div class="headcontent">
-	<div class="row">
-		
-			Телефон: (499) 340-94-71	
-		
-	</div>
-	<div class="row">
-		
-			Email: info@future-group.ru	
-		
-	</div>
-	 <div class="row">
-		<h1>Комментарии</h1>
-	</div> 
-</div>
-    <img  src="img/logo.png" class="logo" alt="">
-</nav>
-
 <div class="main-container">
-<br>
-<br>
-<br>
-<hr>
-<div class="container">
-	<div class="row">
-		<?php
-			$rows[] = showAllComments();
 
-			foreach($rows as $row => $value){ 
-				// echo '<pre>';
-				// var_dump($value);
-				// echo '</pre>';
-				
+	<div class="headcontent">
+		<img  src="img/logo.png" class="logo" alt="">
+		<div class="row">
+				Телефон: (499) 340-94-71	
+		</div>
+		<div class="row">
+				Email: info@future-group.ru	
+		</div>
+		<br><br>
+		 <div class="row">
+			<h1>Комментарии</h1>
+		</div> 
+	</div>
+	<div class="content-container">
+		<div class="container">
+			<?php
+				$rows[] = showAllComments();
 
-				foreach($value as $val){ ?>
+				foreach($rows as $row => $value){ 
+					foreach($value as $val){ ?>
+					<div class="comment ">
+						<div class=" dop_margin ">
+							<b><?=$val['name']?></b> <i><?=$val['data']?></i>
+						</div>
+					</div>
 
+					<div class="row">
+						<div class="col">
+							<?=$val['comment']?>	
+						</div>
+							
+					</div><hr>
 					
-
-				<div class="row">
-					
-						<b><?=$val['name']?></b> <br>	
-					
-				</div>
-				<div class="row">
-					
-						<i><?=$val['data']?></i>	
-					
-				</div>
-
-				
-				<?=$val['comment']?>
-				
-
-
-				
 			<?} } ?>
+		
 	</div>
-</div>
 
 
 
-<hr>
-<h3>Оставить комментарий:</h3>
-<form action="">
+	
+	<h3>Оставить комментарий:</h3>
+	<form action="#" method="post">
 
-	<div class="form-row">
-	    <div class="form-group col-md-6">
-	      <label for="inputEmail4">Ваше имя</label>
-	      <input type="email" class="form-control" id="inputEmail4" placeholder="Введите имя">
-	    </div>
-	  </div>
-	<div class="form-row">
-	    <div class="form-group col-md-6">
-	      <label for="inputComment5">Ваш комментарий</label>
-	      <textarea  type="email" class="form-control" id="inputComment5" placeholder="Введите имя"></textarea>
-	    </div>
-	</div>
-	<div class="form-row">
-	    <div class="form-group col-md-6">
-	      <input type="submit" class="send">
-	    </div>
-	</div>
-</form>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>	
-	<nav class="navbar navbar-light bg-light fixed-bottom ">
+		<div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label for="inputEmail4">Ваше имя</label>
+		      <input type="text" class="form-control" id="inputEmail4" placeholder="Введите имя" name="login" required>
+		    </div>
+		  </div>
+		<div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label for="inputComment5">Ваш комментарий</label>
+		      <textarea  type="email" class="form-control send-form" id="inputComment5" placeholder="Введите имя" name="comment" required></textarea>
+		    </div>
+		</div>
+		<div class="form-row">
+		    <div class="form-group col-md-6">
+		      <input type="submit" class="send" name="send">
+		    </div>
+		</div>
+	</form>
 
-	    <img  src="img/logo.png" class="logo-small" alt="">
+
+</div>   
+
+	<div class="footer">
+		<img  src="img/logo.png" class="logo-small" alt="">
+		
 	    <div class="row">
-			Телефон: (499) 340-94-71
+			<b>Телефон: (499) 340-94-71</b>
 	    </div>
 		 <div class="row">
-			Email: info@future-group.ru 	
+			<b>Email: info@future-group.ru</b> 	
 		 </div>
-		<br>
-		<b>Адрес: 115088 Москваб ул 2-я Машиностроения, д. 7 стр. 1</b> 
-	    <hr>
-	</nav>
+		<div class="row">
+			<b>Адрес: 115088 Москваб ул 2-я Машиностроения, д. 7 стр. 1</b> 	
+		 </div>
+		
+		<div class="row">
+			&copy;2010-2014 Future. Все права под защитой.	
+		 </div>
+			
+	</div>
+
+
+</div>	
+
+
+
+	
+
+	    
+	
 
 
 

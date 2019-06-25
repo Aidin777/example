@@ -2,13 +2,11 @@
 
 	$conn = mysqli_connect('localhost', 'root', 'mysql', 'example');
 	mysqli_query($conn, 'SET NAMES utf8');
-	$table = 'future';
 
 	function showAllComments(){
 
-		global $conn;		
-		global $table;
-		$query = "SELECT * FROM $table ORDER BY id DESC";
+		global $conn;	
+		$query = "SELECT * FROM future ORDER BY id";
 
 		$res = mysqli_query($conn, $query);
 
@@ -17,15 +15,14 @@
 			$rows[] = $row;
 
 		}
-		
 		return $rows;
 	}
 
 	function insertComment($name, $comment){
 		global $conn;		
-		global $table;
+		
 
-		$query = "INSERT INTO $table (`name`, `comment`) VALUES ('$name', '$comment')";
+		$query = "INSERT INTO future (`id`, `name`, `data`, `comment`) VALUES ( NULL, '$name', CURRENT_TIMESTAMP, '$comment')";
 
 		$result = mysqli_query($conn, $query);
 
