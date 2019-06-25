@@ -1,3 +1,32 @@
 body{
 	background-color: grey;
 }
+.main-container{
+	background-color: white;
+	width: 1200px;
+	border: 2px solid black;
+	margin: 20px auto;
+	padding: 40px 20px;
+}
+.headcontent{
+	text-align: left;
+	padding-left: 250px;
+}
+.logo{
+	border-radius: 20px 5px 20px 5px;
+	height: 150px;
+	width: 150px;
+	border: 1px solid black;
+	margin-right: 15%;
+}
+
+.logo-small{
+	margin: 5px 20px 5px 15%; 
+	border-radius: 20px 5px 20px 5px;
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+	float: left;
+	margin-left: ;
+
+}

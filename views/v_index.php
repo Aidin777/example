@@ -2,101 +2,96 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title><?=$title?></title>
+    <title>Future</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
 
-	
-	
-<nav class="navbar navbar-light bg-dark justify-content-between fixed-top">
-    <a class="navbar-brand bg-light" href=""><img src="img/logo.png" alt=""></a>
+<br>
+<br>
+<br>
+<br>
 
+<nav class="navbar navbar-light bg-light justify-content-between fixed-top">
     
-
-    <div class="container">
-
-    	Телефон: (499) 340-94-71
-	Email^ info@future-group.ru
-
-	<h1>Комментарии</h1>
-        <div class="btn-group">
-            <div class="btn-group dropleft">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Тренировка</button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/training/base">Базовая</a></li>
-                    <li><a class="dropdown-item" href="/training/power">Силовая</a></li>
-                    <li><a class="dropdown-item" href="/training/fat_loss">Жиросжигание</a></li>
-                </ul>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">WarFace</button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/databots/warface/add">Добавить</a></li>
-                    <li><a class="dropdown-item"  href="/warface/list">Список</a></li>
-                    <li><a class="dropdown-item" href="/warface/edit">Редактор</a></li>
-                    <div class="dropdown-divider"></div>
-                </ul>
-            </div>
-           
-            <div class="btn-group dropright">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Информация</button>
-                <ul class="dropdown-menu ">
-                    <li><a class="dropdown-item" href="/info/help_changers">Помощь обменника</a></li>
-                    <li><a class="dropdown-item" href="/info/case_winners">Победители кейсов</a></li>
-                
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-</nav>
-<br>
-<br>
-<br>
-<hr>
-
-
-
-<div class="container ">
-    <?php
-    // 1- Подписан  0- Нет)
-//    echo '<pre>';
-//    var_dump($_SESSION['user']);
-//    echo '</pre>';
-    if($_SESSION['user']){ ?>
-        <div class="card">
-            <h5 class="card-header">Добро пожаловать, <?=$_SESSION['user']['first_name']?> </h5>
-            <div class="card-body">
-                <h5 class="card-title"> </h5>
-                <div class="container">
-                    <div class="row">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-    }
-    ?>
-    <?=$content?>
+<div class="headcontent">
+	<div class="row">
+		
+			Телефон: (499) 340-94-71	
+		
+	</div>
+	<div class="row">
+		
+			Email: info@future-group.ru	
+		
+	</div>
+	 <div class="row">
+		<h1>Комментарии</h1>
+	</div> 
 </div>
-<hr>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-Телефон: (499) 340-94-71 <br>
-	Email: info@future-group.ru<br>
-	<b>Адрес: 115088 Москваб ул 2-я Машиностроения, д. 7 стр. 1</b> 
-<nav class="navbar navbar-light bg-dark fixed-bottom text-center">
-    <p >Тестовый вариант функционирования сайта!</p>
-    <hr>
+    <img  src="img/logo.png" class="logo" alt="">
 </nav>
+
+<div class="main-container">
+<br>
+<br>
+<br>
+<hr>
+<div class="container">
+	<div class="row">
+		<?php
+
+			var_dump($rows);
+		?>
+	</div>
+</div>
+
+
+
+<hr>
+<h3>Оставить комментарий:</h3>
+<form action="">
+
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="inputEmail4">Ваше имя</label>
+	      <input type="email" class="form-control" id="inputEmail4" placeholder="Введите имя">
+	    </div>
+	  </div>
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="inputComment5">Ваш комментарий</label>
+	      <textarea  type="email" class="form-control" id="inputComment5" placeholder="Введите имя"></textarea>
+	    </div>
+	</div>
+
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>	
+	<nav class="navbar navbar-light bg-light fixed-bottom ">
+
+	    <img  src="img/logo.png" class="logo-small" alt="">
+	    <div class="row">
+			Телефон: (499) 340-94-71
+	    </div>
+		 <div class="row">
+			Email: info@future-group.ru 	
+		 </div>
+		<br>
+		<b>Адрес: 115088 Москваб ул 2-я Машиностроения, д. 7 стр. 1</b> 
+	    <hr>
+	</nav>
+
+
+
+	
+	
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

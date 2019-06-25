@@ -5,7 +5,7 @@
 
 	function startup() {
 		// Настройки подключения к БД.
-		$conf = parse_ini_file('../../syst/app.ini');
+		$conf = parse_ini_file('syst/app.ini');
 		
 		// Языковая настройка.
 		setlocale(LC_ALL, 'ru_RU.UTF-8'); // Устанавливаем нужную локаль (для дат, денег, запятых и пр.)
@@ -15,7 +15,7 @@
 		$conn = mysqli_connect($conf['host'], $conf['user'], $conf['pass'], $conf['db']);
 		mysqli_query($conn, 'SET NAMES utf8');
 
-		return $conn;
+		// return $conn;
 
 
 	}
